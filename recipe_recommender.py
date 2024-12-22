@@ -9,7 +9,6 @@ recipes = {
     "Banana Smoothie": ["banana", "milk", "yogurt", "honey", "ice"],
 }
 
-
 # Function to recommend recipes
 def recommend_recipes(user_ingredients):
     recommendations = []
@@ -23,9 +22,16 @@ def recommend_recipes(user_ingredients):
             recommendations.append(f"You are close to making {recipe}! Missing: {', '.join(missing)}.")
     return recommendations if recommendations else ["No recipes match. Try adding more ingredients."]
 
-# Input and output
+# Interactive input loop
 print("Welcome to the Recipe Recommender!")
-user_input = input("Enter your ingredients (comma-separated): ").split(",")
-recommendations = recommend_recipes(user_input)
-for rec in recommendations:
-    print(rec)
+print("Type 'exit' to quit.")
+
+while True:
+    user_input = input("\nEnter your ingredients (comma-separated): ")
+    if user_input.lower() == "exit":
+        print("Goodbye! Happy cooking!")
+        break
+    user_ingredients = user_input.split(",")
+    recommendations = recommend_recipes(user_ingredients)
+    for rec in recommendations:
+        print(rec)
