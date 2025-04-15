@@ -7,7 +7,8 @@ recipes = {
     "Vegetable Stir-Fry": ["broccoli", "carrots", "soy sauce", "garlic", "ginger"],
     "Caprese Salad": ["tomatoes", "mozzarella", "basil", "olive oil", "balsamic vinegar"],
     "Banana Smoothie": ["banana", "milk", "yogurt", "honey", "ice"],
-    "Beef Burrito": ["tortilla", "ground beef", "cheese", "lettuce", "tomato"]
+    "Beef Burrito": ["tortilla", "ground beef", "cheese", "lettuce", "tomato"],
+    "Turkey Sandwich": ["bread", "turkey", "cheese", "lettuce", "tomato"]
 }
 
 # Function to recommend recipes
