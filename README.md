@@ -66,20 +66,20 @@ Recommendation: Please contact your veterinarian immediately.
 ## Part 4: Reflection
 
 ### Project Overview:
-This project involved designing a practical, rule-based system to recommend recipes based on user inputs. The system uses logical conditions (e.g., exact and partial matches) to evaluate user-provided ingredients against recipes in the dataset.
+This project involved designing a rule-based system to check pet health based on user input symptoms. The system uses defined symptom severity dictionaries to evaluate user-provided symptoms against potenial risks and care advice in the dataset.
 
 ### Challenges:
-- **Handling Partial Matches:**  
-  Deciding on a threshold (75%) that balances flexibility with accuracy was challenging.
-- **Common Ingredients:**  
-  Ensuring common ingredients like salt and water don’t skew the results. I resolved this by excluding them from the missing ingredient list.
+- **Finding a project to attempt:**  
+  While ChatGPT offered many interesting ideas, like a Smart Home Rule Engine Simulator to help set automation of smart devices, it looked like it would quickly reach outside the parameters of this challenge (similar to the text-based adventure example in the lecture).
+- **Setting symptom dictionaries:**  
+  Many symptoms can overlap into other categories or issues, making them more or less concerning depending on the accompanying symptoms. Further logic and building out of the symptoms would help, but also add in a degree of difficulty/lack of simplicity expected for this project.
 
 ### Comparison to Machine Learning:
-- Unlike machine learning models, this system relies entirely on prewritten rules rather than learning from data.  
-- **Advantages:** Simplicity and transparency.  
+- Unlike machine learning models, this system relies entirely on prewritten rules and datasets rather than learning from data.  
+- **Advantages:** Simplicity and transparency, easy to update and build on for the current intended purpose.  
 - **Limitations:**  
-  - Limited scalability.  
-  - Adding complex logic or handling ambiguous inputs (e.g., "bread" vs. "whole-grain bread") requires extensive manual rule updates, which machine learning could handle more flexibly.
+  - Limited functionality - doesn't accept symptoms not in dataset.  
+  - Adding complex logic or handling undefined symptoms requires time-consuming manual dataset and rule updates, which machine learning could handle more efficiently and with a broader scope.
 
 
 
