@@ -4,49 +4,41 @@
 
 ## Part 1: Initial Project Ideas
 
-### 1. Project Idea 1: Recipe Recommender
-- **Description:** A system that recommends recipes based on ingredients the user has on hand. The user enters ingredients, and the system matches them to recipes using predefined rules.  
+### 1. Project Idea 1: Rule-Based Movie Recommendation System
+- **Description:** A simple expert system for personalized movie suggestions.  
 - **Rule-Based Approach:**  
-  - The system checks for exact matches and partial matches with the ingredients required for recipes in a dataset.  
-  - Missing ingredients are suggested for partial matches.
+  - Recommends movies based on user preferences and a ruleset.
+  - Could also set preferences based on age, previously watched movies, or a mini rule-editor so the the user can modify or add rules.
 
-### 2. Project Idea 2: Simple Chatbot
-- **Description:** A chatbot that responds to user inputs with predefined answers. The chatbot simulates a conversation by identifying keywords and phrases in user inputs.  
+### 2. Project Idea 2: Medical Diagnostic Rool
+- **Description:** A chatbot that simulates early expert systems like MYCIN (used for blood infections). Asks users about symptoms and suggest a diagnosis or action.  
 - **Rule-Based Approach:**  
-  - Responses are based on keywords such as "hello," "help," or "bye."  
-  - For example, if the user says "hello," the system responds with "Hi there! How can I assist you?"
+  - Responses are based on rules to match possible diagnoses  
+  - For example, if the user says symptoms include "cough, fever, and shortness of breath", it would recommend "possible flu or COVID-19. See a doctor"
 
-### 3. Project Idea 3: Travel Packing List Generator
-- **Description:** A system that generates a packing list based on the user’s destination, climate, and trip duration.  
+### 3. Project Idea 3: Symptom Checker for Pets
+- **Description:** A system that uses observable symptoms to guide pet owners toward understanding possible conditions and treatment options.  
 - **Rule-Based Approach:**  
-  - The system uses rules to recommend items.  
-  - For example, if the destination is "beach" and the climate is "hot," the system suggests sunscreen, swimsuits, and sunglasses.
+  - The system uses rules to recommend suggested diagnoses.  
+  - For example, if the user says the pet is "vomiting and lethargic", it would recommend "Potential ingestion of harmful substance. Seek veterinary care."
 
-### **Chosen Idea:** Recipe Recommender  
-**Justification:** I chose this project because it is practical and applicable to real-life scenarios. It allows me to work with datasets, apply conditional logic, and create a system that provides meaningful recommendations based on user input.
+### **Chosen Idea:** Symptom Checker for Pets  
+**Justification:** I chose this project because we have many pets in my home, and my wife works for an animal shelter and has a background in veterinary medicine. While we have easy access to this knowledge, I know that many don't and have to rely on google searches or potentially expensive vet trips for what could be simple solutions.
 
 ---
 
 ## Part 2: Rules/Logic for the Chosen System
 
-The **Recipe Recommender** system will follow these rules:
+The **Symptom Checker for Pets** system will follow these rules:
 
-1. **Exact Match Rule:**  
-   - **IF** all ingredients in a recipe are found in the user’s ingredient list → **Recommend the recipe.**
+1. **Urgent Severity Rule:**  
+   - **IF** any symptoms included are labeled as "severe" symptoms → **Recommend the vet.**
 
-2. **Partial Match Rule:**  
-   - **IF** 75% or more of the ingredients in a recipe match the user’s ingredient list →  
-     - **Recommend the recipe.**  
-     - **Suggest the missing ingredients.**
+2. **Moderate Severity Rule:**  
+   - **IF** no severe symptoms exist AND any symptoms included are labeled as "moderate" symptoms → **Recommend monitoring and vet visit if symptoms persist/worsen.**
 
-3. **Common Ingredients Rule:**  
-   - Ingredients like salt, pepper, and water are considered optional and will not be counted as missing.
-
-4. **No Match Rule:**  
-   - **IF** no recipes match → **Suggest adding more ingredients** for better recommendations.
-
-5. **Low Ingredient Rule:**  
-   - **IF** fewer than three ingredients are provided → **Notify the user** and suggest adding more ingredients.
+3. **Low Severity Rule:**  
+   - **IF** the only symptoms included are labeled as "low" symptoms → **Recommend monitoring at home, potential help.**
 
 ---
 
@@ -54,14 +46,20 @@ The **Recipe Recommender** system will follow these rules:
 
 Sample input and output: 
 
-Enter your ingredients (comma-separated): chicken, rice, soy sauce
-You are close to making Chicken Fried Rice! Missing: garlic.
+Symptoms: sneezing, coughing
+🩺 Assessment:
+ℹ️  Only low-level symptoms detected.
+Recommendation: Monitor at home. Provide comfort and hydration. Seek help if symptoms escalate.
 
-Enter your ingredients (comma-separated): garlic, soy sauce
-No recipes match. Try adding more ingredients.
+Symptoms: shaking, sneezing
+🩺 Assessment:
+⚠️  Moderate symptoms detected.
+Recommendation: Monitor your pet. Visit the vet if symptoms persist or worsen.
 
-Enter your ingredients (comma-separated): pasta, tomatoes, garlic, olive oil
-You can make Spaghetti Pomodoro!
+Symptoms: lethargy, panting
+🩺 Assessment:
+⚠️  Severe symptoms detected.
+Recommendation: Please contact your veterinarian immediately.
 
 ---
 
