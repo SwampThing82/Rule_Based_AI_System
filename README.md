@@ -10,7 +10,7 @@
   - Recommends movies based on user preferences and a ruleset.
   - Could also set preferences based on age, previously watched movies, or a mini rule-editor so the the user can modify or add rules.
 
-### 2. Project Idea 2: Medical Diagnostic Rool
+### 2. Project Idea 2: Medical Diagnostic Tool
 - **Description:** A chatbot that simulates early expert systems like MYCIN (used for blood infections). Asks users about symptoms and suggest a diagnosis or action.  
 - **Rule-Based Approach:**  
   - Responses are based on rules to match possible diagnoses  
